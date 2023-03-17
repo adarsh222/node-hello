@@ -19,10 +19,6 @@ jobs:
           key: ${{ secrets.AWS_KEY }}
           run: 'pwd && ls -la  && ./deploy.sh'
           script: |
-               sudo yum install curl -y 
-               curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash  
-               nvm instal 16
-               nvm use 16
                cd ~/home/ec2-user/node-hello
                git pull origin master
                npm install
