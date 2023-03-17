@@ -21,6 +21,7 @@ jobs:
                pwd
                cd ~/node-hello
                git pull origin master
+               nvm use 16
                npm install
                node index.js
           
