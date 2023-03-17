@@ -1,6 +1,7 @@
 echo "Jump to app folder"
-cd /home/ec2-user/node-hello
-
+cd  ~/home/ec2-user/node-hello
+nvm ls
+nvm use 16
 echo "Update app from Git"
 git pull
 
