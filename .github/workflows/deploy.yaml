@@ -17,10 +17,9 @@ jobs:
           host: ${{ secrets.AWS_HOST }}
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_KEY }}
-          run: 'pwd && ls -la  && ./deploy.sh'
           script: |
                pwd
-               cd ~/home/ec2-user/node-hello
+               cd ~/node-hello
                git pull origin master
                npm install
                node index.js
