@@ -19,5 +19,12 @@ jobs:
           key: ${{ secrets.AWS_KEY }}
           run: 'pwd && ls -la  && ./deploy.sh'
           script: |
-               ./deploy.sh
+              curl -o-   https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh    | bash
+              . ~/.nvm/nvm.sh
+               nvm instal 16
+               nvm use 16
+               cd ~/home/ec2-user/node-hello
+               git pull origin master
+               npm install
+               node index.js
           
