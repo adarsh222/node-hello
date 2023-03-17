@@ -19,4 +19,7 @@ jobs:
           key: ${{ secrets.AWS_KEY }}
           run: 'pwd && ls -la  && ./deploy.sh'
           # command: 'pwd && cd /home/ec2-user/node-hello && ./deploy.sh'
-      
+      - name: Run deployment script
+        run: |
+            ssh -i ${{ secrets.AWS_KEY }} ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }} "cd /home/${{ secrets.AWS_USER }}/node-hello && ./deploy.sh"
+          
