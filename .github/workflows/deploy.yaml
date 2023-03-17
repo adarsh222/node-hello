@@ -17,5 +17,6 @@ jobs:
           host: ${{ secrets.AWS_HOST }}
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_KEY }}
+          run: 'pwd && ls -la  && ./deploy.sh'
           # command: 'pwd && cd /home/ec2-user/node-hello && ./deploy.sh'
-      - run: 'pwd && ls -la  && ./deploy.sh'
+      
