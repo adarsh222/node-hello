@@ -18,4 +18,4 @@ jobs:
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_KEY }}
           # command: 'pwd && cd /home/ec2-user/node-hello && ./deploy.sh'
-          script: sh deploy.sh
+          run: /home/ec2-user/node-hello/deploy.sh
