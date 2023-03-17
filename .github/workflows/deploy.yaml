@@ -19,6 +19,7 @@ jobs:
           key: ${{ secrets.AWS_KEY }}
           run: 'pwd && ls -la  && ./deploy.sh'
           script: |
+               pwd
                cd ~/home/ec2-user/node-hello
                git pull origin master
                npm install
