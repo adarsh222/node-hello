@@ -19,6 +19,5 @@ jobs:
           key: ${{ secrets.AWS_KEY }}
           run: 'pwd && ls -la  && ./deploy.sh'
           script: |
-               cd ~/home/ec2-user/node-hello
                ./deploy.sh
           
